@@ -1,1 +1,471 @@
-{"type":"flopack","version":"1.2.0","created":"2020-07-23T00:29:45.666Z","flags":{"auto-transform":true,"looseBooleans":true,"looseStrings":true,"looseNulls":true},"data":{"flos":{"3f9d90ec-ef9f-4ae6-a6a7-3c338df98c40":{"id":"3f9d90ec-ef9f-4ae6-a6a7-3c338df98c40","name":"Basic2","description":"","data":{"id":null,"uuid":"3f9d90ec-ef9f-4ae6-a6a7-3c338df98c40","display":{"preview":[{"module":"http","name":"accept","kernel":true},{"module":"control","name":"return","kernel":true}],"isCallable":false,"isPublishable":true},"tree":{"name":"all","id":1},"methods":[{"joins":{},"address":"root:kernel:http:0.0.1:accept","parents":{"version":{"address":"root:kernel:http:0.0.1","key":"0.0.1","data":{"name":"0.0.1"}},"channel":{"address":"root:kernel:http","key":"http","data":{"name":"http"}}},"uuid":"LHRxoeOBf","branches":{},"node":{"key":"accept","data":{"name":"API Endpoint"},"model":{"type":"method","_v":2,"key":"accept","executable":false,"displayed":true,"async":false,"cooperative":false,"mirrored":true,"inlined":false,"dependencies":[],"timeout":90000,"idempotent":false,"monitor":false,"webhook":false,"webhookList":false,"webhookConditions":false,"mobile":false,"hooks":{},"policy":{"error":{"type":"finish"}},"metadata":{"id":null,"name":"API Endpoint","description":"Accept input to start a Flow."},"meta":{},"config":null,"partnerChannelKeys":null,"inputs":{"extensible":false,"groupRules":{},"data":{"lMQ47hx8rR":{"id":"lMQ47hx8rR","group":"raw","key":"headers","value":{"type":"object","collection":false,"data":{}},"ref":false,"metadata":{"hidden":true,"index":0},"required":false,"flags":"d"},"QE5sfqFgQh":{"id":"QE5sfqFgQh","group":"raw","key":"body","value":{"type":"string","collection":false,"data":""},"ref":false,"metadata":{"hidden":true,"index":1},"required":false,"flags":"d"},"Oo8UE-W75K":{"id":"Oo8UE-W75K","group":"raw","key":"query","value":{"type":"string","collection":false,"data":""},"ref":false,"metadata":{"hidden":true,"index":2},"required":false,"flags":"d"},"x786EVAReY":{"id":"x786EVAReY","group":"context","key":"execution_id","value":{"error":false,"type":"string","collection":false,"data":null,"available":[]},"ref":false,"metadata":{"displayname":"Execution ID","index":3},"required":false,"flags":"d"}}},"outputs":{"extensible":false,"rules":{"*":{"types":["*"],"collection":"*"}},"groupRules":{"body":{"type":"object","reserved":{},"extensible":true},"headers":{"type":"object","reserved":{"Content-Type":"string"},"extensible":true},"query":{"type":"object","reserved":{},"extensible":true},"context":{"extensible":false}},"data":{"rcJzJMZqV9":{"id":"rcJzJMZqV9","group":"raw","key":"headers","value":{"type":"object","collection":false,"data":{}},"ref":false,"metadata":{"hidden":true,"index":0}},"1f2a0qyC08":{"id":"1f2a0qyC08","group":"raw","key":"body","value":{"type":"string","collection":false,"data":""},"ref":false,"metadata":{"hidden":true,"index":1}},"gwFN9s3BOX":{"id":"gwFN9s3BOX","group":"raw","key":"query","value":{"type":"string","collection":false,"data":""},"ref":false,"metadata":{"hidden":true,"index":2}},"_Cm_QKDQq_":{"id":"_Cm_QKDQq_","group":"context","key":"execution_id","value":{"error":false,"type":"string","collection":false,"data":null,"available":[]},"ref":false,"metadata":{"displayname":"Execution ID","index":3},"_used":true}}},"runtime":{}}},"pins":{"_Cm_QKDQq_":{"YnDgNdaa2":[{"input":"-bfi1MMTR","transform":null}]}}},{"joins":{},"address":"root:kernel:control:0.0.1:return","parents":{"version":{"address":"root:kernel:control:0.0.1","key":"0.0.1","data":{"name":"0.0.1"}},"channel":{"address":"root:kernel:control","key":"control","data":{"name":"control"}}},"uuid":"YnDgNdaa2","branches":{},"node":{"key":"return","data":{"name":"Return"},"model":{"type":"method","_v":2,"key":"return","executable":false,"displayed":true,"async":false,"cooperative":false,"mirrored":true,"inlined":false,"dependencies":[],"timeout":90000,"idempotent":false,"monitor":false,"webhook":false,"webhookList":false,"webhookConditions":false,"mobile":false,"hooks":{},"policy":{"error":{"type":"finish"}},"metadata":{"id":null,"name":"Return","description":"End the Flow and return values to the caller of the Flow."},"meta":{},"config":null,"partnerChannelKeys":null,"inputs":{"extensible":true,"rules":{"*":{"types":["*"],"collection":"*"}},"data":{"-bfi1MMTR":{"id":"-bfi1MMTR","group":null,"key":"Execution ID","value":{"error":false,"proxy":false,"check":false,"type":"string","collection":false,"data":"","available":["string","number","boolean","Date","Array","object","file","flo"]},"required":false,"ref":false,"metadata":{"index":0,"custom":true},"flags":"d"}}},"outputs":{"extensible":true,"rules":{"*":{"types":["*"],"collection":"*"}},"data":{"qQ-dxvty1p":{"id":"qQ-dxvty1p","group":null,"key":"Execution ID","value":{"error":false,"proxy":false,"check":false,"type":"string","collection":false,"data":"","available":["string","number","boolean","Date","Array","object","file","flo"]},"ref":false,"metadata":{"index":0,"custom":true},"flags":"d"}}},"runtime":{}}},"pins":{}}],"model":{},"orderings":{"eoqXMw2zV":["LHRxoeOBf","YnDgNdaa2"]},"cron":{},"security_level":"high","log":false,"inheritLog":true,"scheduled":false,"group":"06084ecd-70bb-4405-b530-af4f2123813d"}}},"configs":{},"tables":{},"groups":{"06084ecd-70bb-4405-b530-af4f2123813d":{"id":"06084ecd-70bb-4405-b530-af4f2123813d","data":{"name":"Basic0","description":"","media_uri":""}}}}}
+{
+  "org": "rheng-okta",
+  "repo": "flows-backup",
+  "fileName": "basicFlow2.flopack",
+  "branch": "main",
+  "flo": {
+    "type": "flopack",
+    "version": "1.2.0",
+    "created": "2020-07-23T00:29:45.666Z",
+    "flags": {
+      "auto-transform": true,
+      "looseBooleans": true,
+      "looseStrings": true,
+      "looseNulls": true
+    },
+    "data": {
+      "flos": {
+        "3f9d90ec-ef9f-4ae6-a6a7-3c338df98c40": {
+          "id": "3f9d90ec-ef9f-4ae6-a6a7-3c338df98c40",
+          "name": "Basic2",
+          "description": "",
+          "data": {
+            "id": null,
+            "uuid": "3f9d90ec-ef9f-4ae6-a6a7-3c338df98c40",
+            "display": {
+              "preview": [
+                {
+                  "module": "http",
+                  "name": "accept",
+                  "kernel": true
+                },
+                {
+                  "module": "control",
+                  "name": "return",
+                  "kernel": true
+                }
+              ],
+              "isCallable": false,
+              "isPublishable": true
+            },
+            "tree": {
+              "name": "all",
+              "id": 1
+            },
+            "methods": [
+              {
+                "joins": {},
+                "address": "root:kernel:http:0.0.1:accept",
+                "parents": {
+                  "version": {
+                    "address": "root:kernel:http:0.0.1",
+                    "key": "0.0.1",
+                    "data": {
+                      "name": "0.0.1"
+                    }
+                  },
+                  "channel": {
+                    "address": "root:kernel:http",
+                    "key": "http",
+                    "data": {
+                      "name": "http"
+                    }
+                  }
+                },
+                "uuid": "LHRxoeOBf",
+                "branches": {},
+                "node": {
+                  "key": "accept",
+                  "data": {
+                    "name": "API Endpoint"
+                  },
+                  "model": {
+                    "type": "method",
+                    "_v": 2,
+                    "key": "accept",
+                    "executable": false,
+                    "displayed": true,
+                    "async": false,
+                    "cooperative": false,
+                    "mirrored": true,
+                    "inlined": false,
+                    "dependencies": [],
+                    "timeout": 90000,
+                    "idempotent": false,
+                    "monitor": false,
+                    "webhook": false,
+                    "webhookList": false,
+                    "webhookConditions": false,
+                    "mobile": false,
+                    "hooks": {},
+                    "policy": {
+                      "error": {
+                        "type": "finish"
+                      }
+                    },
+                    "metadata": {
+                      "id": null,
+                      "name": "API Endpoint",
+                      "description": "Accept input to start a Flow."
+                    },
+                    "meta": {},
+                    "config": null,
+                    "partnerChannelKeys": null,
+                    "inputs": {
+                      "extensible": false,
+                      "groupRules": {},
+                      "data": {
+                        "lMQ47hx8rR": {
+                          "id": "lMQ47hx8rR",
+                          "group": "raw",
+                          "key": "headers",
+                          "value": {
+                            "type": "object",
+                            "collection": false,
+                            "data": {}
+                          },
+                          "ref": false,
+                          "metadata": {
+                            "hidden": true,
+                            "index": 0
+                          },
+                          "required": false,
+                          "flags": "d"
+                        },
+                        "QE5sfqFgQh": {
+                          "id": "QE5sfqFgQh",
+                          "group": "raw",
+                          "key": "body",
+                          "value": {
+                            "type": "string",
+                            "collection": false,
+                            "data": ""
+                          },
+                          "ref": false,
+                          "metadata": {
+                            "hidden": true,
+                            "index": 1
+                          },
+                          "required": false,
+                          "flags": "d"
+                        },
+                        "Oo8UE-W75K": {
+                          "id": "Oo8UE-W75K",
+                          "group": "raw",
+                          "key": "query",
+                          "value": {
+                            "type": "string",
+                            "collection": false,
+                            "data": ""
+                          },
+                          "ref": false,
+                          "metadata": {
+                            "hidden": true,
+                            "index": 2
+                          },
+                          "required": false,
+                          "flags": "d"
+                        },
+                        "x786EVAReY": {
+                          "id": "x786EVAReY",
+                          "group": "context",
+                          "key": "execution_id",
+                          "value": {
+                            "error": false,
+                            "type": "string",
+                            "collection": false,
+                            "data": null,
+                            "available": []
+                          },
+                          "ref": false,
+                          "metadata": {
+                            "displayname": "Execution ID",
+                            "index": 3
+                          },
+                          "required": false,
+                          "flags": "d"
+                        }
+                      }
+                    },
+                    "outputs": {
+                      "extensible": false,
+                      "rules": {
+                        "*": {
+                          "types": [
+                            "*"
+                          ],
+                          "collection": "*"
+                        }
+                      },
+                      "groupRules": {
+                        "body": {
+                          "type": "object",
+                          "reserved": {},
+                          "extensible": true
+                        },
+                        "headers": {
+                          "type": "object",
+                          "reserved": {
+                            "Content-Type": "string"
+                          },
+                          "extensible": true
+                        },
+                        "query": {
+                          "type": "object",
+                          "reserved": {},
+                          "extensible": true
+                        },
+                        "context": {
+                          "extensible": false
+                        }
+                      },
+                      "data": {
+                        "rcJzJMZqV9": {
+                          "id": "rcJzJMZqV9",
+                          "group": "raw",
+                          "key": "headers",
+                          "value": {
+                            "type": "object",
+                            "collection": false,
+                            "data": {}
+                          },
+                          "ref": false,
+                          "metadata": {
+                            "hidden": true,
+                            "index": 0
+                          }
+                        },
+                        "1f2a0qyC08": {
+                          "id": "1f2a0qyC08",
+                          "group": "raw",
+                          "key": "body",
+                          "value": {
+                            "type": "string",
+                            "collection": false,
+                            "data": ""
+                          },
+                          "ref": false,
+                          "metadata": {
+                            "hidden": true,
+                            "index": 1
+                          }
+                        },
+                        "gwFN9s3BOX": {
+                          "id": "gwFN9s3BOX",
+                          "group": "raw",
+                          "key": "query",
+                          "value": {
+                            "type": "string",
+                            "collection": false,
+                            "data": ""
+                          },
+                          "ref": false,
+                          "metadata": {
+                            "hidden": true,
+                            "index": 2
+                          }
+                        },
+                        "_Cm_QKDQq_": {
+                          "id": "_Cm_QKDQq_",
+                          "group": "context",
+                          "key": "execution_id",
+                          "value": {
+                            "error": false,
+                            "type": "string",
+                            "collection": false,
+                            "data": null,
+                            "available": []
+                          },
+                          "ref": false,
+                          "metadata": {
+                            "displayname": "Execution ID",
+                            "index": 3
+                          },
+                          "_used": true
+                        }
+                      }
+                    },
+                    "runtime": {}
+                  }
+                },
+                "pins": {
+                  "_Cm_QKDQq_": {
+                    "YnDgNdaa2": [
+                      {
+                        "input": "-bfi1MMTR",
+                        "transform": null
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "joins": {},
+                "address": "root:kernel:control:0.0.1:return",
+                "parents": {
+                  "version": {
+                    "address": "root:kernel:control:0.0.1",
+                    "key": "0.0.1",
+                    "data": {
+                      "name": "0.0.1"
+                    }
+                  },
+                  "channel": {
+                    "address": "root:kernel:control",
+                    "key": "control",
+                    "data": {
+                      "name": "control"
+                    }
+                  }
+                },
+                "uuid": "YnDgNdaa2",
+                "branches": {},
+                "node": {
+                  "key": "return",
+                  "data": {
+                    "name": "Return"
+                  },
+                  "model": {
+                    "type": "method",
+                    "_v": 2,
+                    "key": "return",
+                    "executable": false,
+                    "displayed": true,
+                    "async": false,
+                    "cooperative": false,
+                    "mirrored": true,
+                    "inlined": false,
+                    "dependencies": [],
+                    "timeout": 90000,
+                    "idempotent": false,
+                    "monitor": false,
+                    "webhook": false,
+                    "webhookList": false,
+                    "webhookConditions": false,
+                    "mobile": false,
+                    "hooks": {},
+                    "policy": {
+                      "error": {
+                        "type": "finish"
+                      }
+                    },
+                    "metadata": {
+                      "id": null,
+                      "name": "Return",
+                      "description": "End the Flow and return values to the caller of the Flow."
+                    },
+                    "meta": {},
+                    "config": null,
+                    "partnerChannelKeys": null,
+                    "inputs": {
+                      "extensible": true,
+                      "rules": {
+                        "*": {
+                          "types": [
+                            "*"
+                          ],
+                          "collection": "*"
+                        }
+                      },
+                      "data": {
+                        "-bfi1MMTR": {
+                          "id": "-bfi1MMTR",
+                          "group": null,
+                          "key": "Execution ID",
+                          "value": {
+                            "error": false,
+                            "proxy": false,
+                            "check": false,
+                            "type": "string",
+                            "collection": false,
+                            "data": "",
+                            "available": [
+                              "string",
+                              "number",
+                              "boolean",
+                              "Date",
+                              "Array",
+                              "object",
+                              "file",
+                              "flo"
+                            ]
+                          },
+                          "required": false,
+                          "ref": false,
+                          "metadata": {
+                            "index": 0,
+                            "custom": true
+                          },
+                          "flags": "d"
+                        }
+                      }
+                    },
+                    "outputs": {
+                      "extensible": true,
+                      "rules": {
+                        "*": {
+                          "types": [
+                            "*"
+                          ],
+                          "collection": "*"
+                        }
+                      },
+                      "data": {
+                        "qQ-dxvty1p": {
+                          "id": "qQ-dxvty1p",
+                          "group": null,
+                          "key": "Execution ID",
+                          "value": {
+                            "error": false,
+                            "proxy": false,
+                            "check": false,
+                            "type": "string",
+                            "collection": false,
+                            "data": "",
+                            "available": [
+                              "string",
+                              "number",
+                              "boolean",
+                              "Date",
+                              "Array",
+                              "object",
+                              "file",
+                              "flo"
+                            ]
+                          },
+                          "ref": false,
+                          "metadata": {
+                            "index": 0,
+                            "custom": true
+                          },
+                          "flags": "d"
+                        }
+                      }
+                    },
+                    "runtime": {}
+                  }
+                },
+                "pins": {}
+              }
+            ],
+            "model": {},
+            "orderings": {
+              "eoqXMw2zV": [
+                "LHRxoeOBf",
+                "YnDgNdaa2"
+              ]
+            },
+            "cron": {},
+            "security_level": "high",
+            "log": false,
+            "inheritLog": true,
+            "scheduled": false,
+            "group": "06084ecd-70bb-4405-b530-af4f2123813d"
+          }
+        }
+      },
+      "configs": {},
+      "tables": {},
+      "groups": {
+        "06084ecd-70bb-4405-b530-af4f2123813d": {
+          "id": "06084ecd-70bb-4405-b530-af4f2123813d",
+          "data": {
+            "name": "Basic0",
+            "description": "",
+            "media_uri": ""
+          }
+        }
+      }
+    }
+  }
+}
