@@ -1,7 +1,7 @@
 {
   "type": "flopack",
   "version": "1.2.0",
-  "created": "2020-10-09T17:58:51.167Z",
+  "created": "2020-10-09T22:19:58.637Z",
   "flags": {
     "auto-transform": true,
     "looseBooleans": true,
@@ -10,13 +10,13 @@
   },
   "data": {
     "flos": {
-      "0a43214d-1693-4b1b-8b7c-d51e1ba2a468": {
-        "id": "0a43214d-1693-4b1b-8b7c-d51e1ba2a468",
+      "d9220b07-d710-4078-b973-f6435c067507": {
+        "id": "d9220b07-d710-4078-b973-f6435c067507",
         "name": "Get",
         "description": "",
         "data": {
           "id": null,
-          "uuid": "0a43214d-1693-4b1b-8b7c-d51e1ba2a468",
+          "uuid": "d9220b07-d710-4078-b973-f6435c067507",
           "display": {
             "preview": [
               {
@@ -33,6 +33,11 @@
                 "module": "control",
                 "name": "comment",
                 "kernel": true
+              },
+              {
+                "module": "github",
+                "name": "customAPIAction",
+                "kernel": false
               }
             ],
             "isCallable": false
@@ -187,7 +192,7 @@
                       }
                     }
                   },
-                  "config": "ac2aadf2-a106-4bdf-a812-f9d9390c4f79",
+                  "config": "a57ca5e0-b0e0-42c0-ab78-519e18ee699c",
                   "partnerChannelKeys": 2,
                   "inputs": {
                     "extensible": false,
@@ -470,16 +475,302 @@
                 }
               },
               "pins": {}
+            },
+            {
+              "joins": {},
+              "address": "root:channels:http:github:2.0.15:customAPIAction",
+              "parents": {
+                "version": {
+                  "address": "root:channels:http:github:2.0.15",
+                  "key": "2.0.15",
+                  "data": {
+                    "name": "2.0.15",
+                    "id": 34
+                  }
+                },
+                "channel": {
+                  "address": "root:channels:http:github",
+                  "key": "github",
+                  "data": {
+                    "name": "github",
+                    "id": 18
+                  }
+                }
+              },
+              "uuid": "OfpHA7Z_P",
+              "branches": {},
+              "node": {
+                "key": "customAPIAction",
+                "data": {
+                  "name": "Custom API Action"
+                },
+                "model": {
+                  "type": "method",
+                  "_v": 2,
+                  "key": "customAPIAction",
+                  "executable": true,
+                  "displayed": true,
+                  "async": true,
+                  "cooperative": false,
+                  "mirrored": false,
+                  "compat": false,
+                  "inlined": false,
+                  "dependencies": [],
+                  "timeout": 30000,
+                  "idempotent": false,
+                  "monitor": false,
+                  "webhook": false,
+                  "webhookList": false,
+                  "webhookConditions": false,
+                  "mobile": false,
+                  "hooks": {},
+                  "policy": {
+                    "error": {
+                      "type": "finish"
+                    }
+                  },
+                  "metadata": {
+                    "id": 234,
+                    "name": "Custom API Action",
+                    "description": null
+                  },
+                  "meta": {
+                    "b98a4c39-9bc2-4d9f-ab33-f0b9b8fa2dd9": {
+                      "id": "uI30jSHrJ__",
+                      "address": {
+                        "key": null,
+                        "group": "Request",
+                        "fieldIndex": 0,
+                        "defaultValue": {
+                          "path": [],
+                          "method": "getHttpInputs",
+                          "data": {}
+                        },
+                        "namespace": "input"
+                      }
+                    }
+                  },
+                  "config": "a57ca5e0-b0e0-42c0-ab78-519e18ee699c",
+                  "partnerChannelKeys": 2,
+                  "inputs": {
+                    "extensible": false,
+                    "rules": {},
+                    "groupRules": {
+                      "Request": {
+                        "extensible": false,
+                        "reserved": {},
+                        "index": 0,
+                        "type": "object"
+                      }
+                    },
+                    "data": {
+                      "g-QhjUJPnt": {
+                        "id": "g-QhjUJPnt",
+                        "group": "parameters",
+                        "key": "requestType",
+                        "value": {
+                          "error": false,
+                          "proxy": false,
+                          "check": false,
+                          "type": "string",
+                          "collection": false,
+                          "data": "GET",
+                          "available": []
+                        },
+                        "required": false,
+                        "ref": false,
+                        "metadata": {
+                          "type": "list",
+                          "displayname": "Request Type",
+                          "choices": [
+                            {
+                              "label": "GET",
+                              "value": "GET"
+                            },
+                            {
+                              "label": "POST",
+                              "value": "POST"
+                            },
+                            {
+                              "label": "PUT",
+                              "value": "PUT"
+                            },
+                            {
+                              "label": "PATCH",
+                              "value": "PATCH"
+                            },
+                            {
+                              "label": "DELETE",
+                              "value": "DELETE"
+                            }
+                          ],
+                          "dependencies": [],
+                          "optional": false,
+                          "ordering": 0,
+                          "index": 0
+                        },
+                        "flags": "p"
+                      },
+                      "WKwHN1Q05": {
+                        "id": "WKwHN1Q05",
+                        "group": "Request",
+                        "key": "Relative URL",
+                        "value": {
+                          "error": false,
+                          "proxy": false,
+                          "check": false,
+                          "type": "string",
+                          "collection": false,
+                          "data": "",
+                          "available": [
+                            "string"
+                          ]
+                        },
+                        "required": false,
+                        "ref": false,
+                        "metadata": {
+                          "index": 0,
+                          "optional": false
+                        },
+                        "flags": "d"
+                      },
+                      "9Iamcl2Y14": {
+                        "id": "9Iamcl2Y14",
+                        "group": "Request",
+                        "key": "Query",
+                        "value": {
+                          "error": false,
+                          "proxy": false,
+                          "check": false,
+                          "type": "object",
+                          "collection": false,
+                          "data": {},
+                          "available": [
+                            "object"
+                          ]
+                        },
+                        "required": false,
+                        "ref": false,
+                        "metadata": {
+                          "index": 1,
+                          "optional": false
+                        },
+                        "flags": "d"
+                      },
+                      "jYo2NwSJbI": {
+                        "id": "jYo2NwSJbI",
+                        "group": "Request",
+                        "key": "Headers",
+                        "value": {
+                          "error": false,
+                          "proxy": false,
+                          "check": false,
+                          "type": "object",
+                          "collection": false,
+                          "data": {},
+                          "available": [
+                            "object"
+                          ]
+                        },
+                        "required": false,
+                        "ref": false,
+                        "metadata": {
+                          "index": 2,
+                          "optional": false
+                        },
+                        "flags": "d"
+                      }
+                    }
+                  },
+                  "outputs": {
+                    "extensible": false,
+                    "rules": {},
+                    "groupRules": {
+                      "Response": {
+                        "extensible": false,
+                        "reserved": {},
+                        "index": 0,
+                        "type": "object"
+                      }
+                    },
+                    "data": {
+                      "XsQdBJuQyO": {
+                        "id": "XsQdBJuQyO",
+                        "group": "Response",
+                        "key": "Status Code",
+                        "value": {
+                          "error": false,
+                          "type": "number",
+                          "collection": false,
+                          "data": 0,
+                          "available": [
+                            "number"
+                          ]
+                        },
+                        "ref": false,
+                        "metadata": {
+                          "index": 0
+                        }
+                      },
+                      "JY2BJq1UEr": {
+                        "id": "JY2BJq1UEr",
+                        "group": "Response",
+                        "key": "Headers",
+                        "value": {
+                          "error": false,
+                          "type": "object",
+                          "collection": false,
+                          "data": {},
+                          "available": [
+                            "object"
+                          ]
+                        },
+                        "ref": false,
+                        "metadata": {
+                          "index": 1
+                        }
+                      },
+                      "pCu2fGBZeZ": {
+                        "id": "pCu2fGBZeZ",
+                        "group": "Response",
+                        "key": "Body",
+                        "value": {
+                          "error": false,
+                          "type": "object",
+                          "collection": false,
+                          "data": {},
+                          "available": [
+                            "object"
+                          ]
+                        },
+                        "ref": false,
+                        "metadata": {
+                          "index": 2
+                        }
+                      }
+                    }
+                  },
+                  "runtime": {},
+                  "display": {},
+                  "comments": "Perform an authenticated HTTP request against the Github API.",
+                  "enableNewMetadata": true
+                }
+              },
+              "pins": {}
             }
           ],
           "model": {},
           "orderings": {
-            "xVFF7_5ll": [
+            "-CXjTnJ-Mr": [
               "GMExAtwAaz",
               "1W-rQdxUw"
             ],
-            "iLz5VXOCdV": [
+            "-7h4eNqq5C": [
               "1W-rQdxUw",
+              "OfpHA7Z_P"
+            ],
+            "aDA5R-zmtk": [
+              "OfpHA7Z_P",
               "UxkIuTom0"
             ]
           },
@@ -488,14 +779,14 @@
           "log": true,
           "inheritLog": true,
           "scheduled": false,
-          "group": "e99a86f3-6954-4be6-ba12-8db92b1202b6",
+          "group": "2f2a60a5-11a2-45f9-9c3c-ecca14b0d711",
           "templateName": null
         }
       }
     },
     "configs": {
-      "ac2aadf2-a106-4bdf-a812-f9d9390c4f79": {
-        "id": "ac2aadf2-a106-4bdf-a812-f9d9390c4f79",
+      "a57ca5e0-b0e0-42c0-ab78-519e18ee699c": {
+        "id": "a57ca5e0-b0e0-42c0-ab78-519e18ee699c",
         "name": "test",
         "module": "github",
         "data": null
@@ -503,8 +794,8 @@
     },
     "tables": {},
     "groups": {
-      "e99a86f3-6954-4be6-ba12-8db92b1202b6": {
-        "id": "e99a86f3-6954-4be6-ba12-8db92b1202b6",
+      "2f2a60a5-11a2-45f9-9c3c-ecca14b0d711": {
+        "id": "2f2a60a5-11a2-45f9-9c3c-ecca14b0d711",
         "data": {
           "name": "Versioning",
           "description": "",
